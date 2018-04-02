@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: bundle Plug-in
+Bundle-SymbolicName: tycho.demo.itp02.bundle.tests;singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Fragment-Host: tycho.demo.itp02.bundle
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.junit;bundle-version="4.12.0",
+ org.eclipse.core.runtime
+Export-Package: tycho.demo.itp02.bundle.tests

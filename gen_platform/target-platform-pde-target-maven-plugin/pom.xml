@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>examples</groupId>
+    <artifactId>examples.gen_platform-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+	
+  <artifactId>deps.repository</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  
+  <packaging>pom</packaging>
+
+
+  <dependencies>
+  
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>24.0-jre</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>io.vavr</groupId>
+      <artifactId>vavr</artifactId>
+      <version>0.9.0</version>
+    </dependency>
+    
+  </dependencies>
+  
+  <properties>
+    <pde.target.baseDefinition>${project.basedir}/IDE-base.target</pde.target.baseDefinition>
+    <pde.target.outputFile>${project.build.directory}/../IDE-gen.target</pde.target.outputFile>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>lt.velykis.maven</groupId>
+        <artifactId>pde-target-maven-plugin</artifactId>
+        <version>1.0.0</version>
+        <executions>
+          <execution>
+            <id>pde-target</id>
+            <goals>
+              <goal>add-pom-dependencies</goal>
+            </goals>
+<!--             <configuration> -->
+<!--               <baseDefinition>${project.basedir}/IDE-base.target</baseDefinition> -->
+<!--               <outputFile>${project.build.directory}/IDE-gen.target</outputFile> -->
+<!--             </configuration> -->
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

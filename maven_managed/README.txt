@@ -1,0 +1,1 @@
+Doesn't work, to have a M2E-managed project classpath
