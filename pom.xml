@@ -19,7 +19,6 @@
 
   <modules>
     <module>examples</module>
-    <module>examples.tests</module>
   </modules>
 
 
