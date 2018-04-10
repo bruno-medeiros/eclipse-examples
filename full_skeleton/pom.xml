@@ -18,7 +18,8 @@
 
 
 	<modules>
-		<module>maven_deps</module>
+<!-- 	maven_deps needs to be build separately, because Tycho seems to try to validate the p2 repository too early in Maven phases! -->
+<!-- 		<module>maven_deps</module> -->
 		<module>foo.bundle</module>
 		<module>foo.bundle.tests</module>
 	</modules>

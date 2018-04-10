@@ -7,14 +7,14 @@ A sample skeleton project of an Eclipse plugins, supporting:
   * Supports non-OSGi, non-p2 Maven artifacts.
 
 
-### Building the IDE:
+### Building:
 
  * To build, run:
  * `mvn clean verify` at the root of the repository. 
 
 ### Setup development environment:
- * Open `dev-environment.target` , set as target platform. 
-  * (if this file is customized, save outside the repository)
+ * Open `dev-environment.target`, set as target platform. 
+  * (Don't modify this file direclty, save a copy outside the repository)
 
 
 ### Other notes:
