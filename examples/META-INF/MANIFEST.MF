@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-SymbolicName: eclipse_examples;singleton:=true
-Automatic-Module-Name: eclipse_examples
+Bundle-SymbolicName: eclipse_snippets;singleton:=true
+Automatic-Module-Name: eclipse_snippets
 Bundle-Version: 0.1.0.qualifier
-Bundle-Name: Eclipse Examples
+Bundle-Name: Eclipse Snippets
 Bundle-Vendor: %vendor
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Require-Bundle: org.eclipse.debug.core,
