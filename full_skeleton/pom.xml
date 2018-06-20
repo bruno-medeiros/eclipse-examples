@@ -22,6 +22,8 @@
 <!-- 		<module>maven_deps</module> -->
 		<module>foo.bundle</module>
 		<module>foo.bundle.tests</module>
+		<module>foo.bundle.ui</module>
+		<module>foo.bundle.ui.tests</module>
 	</modules>
 
 

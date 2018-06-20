@@ -9,8 +9,8 @@ A sample skeleton project of an Eclipse plugins, supporting:
 
 ### Building:
 
- * To build, run:
- * `mvn clean verify` at the root of the repository. 
+ * Execute `mvn -f maven_deps/ initialize` to initialize maven POM deps as p2 repo.
+ * Executw `mvn clean verify` at the root of the repository. 
 
 ### Setup development environment:
  * Open `dev-environment.target`, set as target platform. 

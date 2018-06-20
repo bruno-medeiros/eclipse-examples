@@ -41,6 +41,16 @@
 									<id>org.apache.commons:commons-lang3:3.1</id>
 									<source>true</source>
 								</artifact>
+
+								<!-- Test deps -->
+								<artifact>
+									<id>org.mockito:mockito-core:2.17.0</id>
+									<source>true</source>
+								</artifact>
+								<artifact>
+									<id>org.assertj:assertj-core:3.9.0</id>
+									<source>true</source>
+								</artifact>
 							</artifacts>
 						</configuration>
 					</execution>
