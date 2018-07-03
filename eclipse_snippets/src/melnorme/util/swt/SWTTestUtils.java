@@ -28,6 +28,10 @@ import org.eclipse.ui.PlatformUI;
 
 public class SWTTestUtils {
 	
+	public static void runPendingUIEvents() {
+		runPendingUIEvents(Display.getCurrent());
+	}
+	
 	/** Runs the event queue executing all events that were pending when this method was called. 
 	 * Note BM: This works under the assumption that {@link Display#asyncExec(Runnable)} puts the given runnable 
 	 * at the end of the queue */
@@ -53,7 +57,7 @@ public class SWTTestUtils {
 		}
 	}
 	
-	public static void runSWTEventLoopUntilBreak() {
+	public static void runSWTEventLoopUntilBreak(Shell shell) {
 		Display display = Display.getCurrent();
 		
 		final boolean[] breakLoopFlag = new boolean[1];
@@ -68,7 +72,7 @@ public class SWTTestUtils {
 			}
 		});
 		
-		while(breakLoopFlag[0] == false) {
+		while(breakLoopFlag[0] == false && !shell.isDisposed()) {
 			if(!display.readAndDispatch())
 				display.sleep();
 		}
@@ -92,7 +96,7 @@ public class SWTTestUtils {
 				
 				shell.open();
 				shell.pack();
-				runSWTEventLoopUntilBreak();
+				runSWTEventLoopUntilBreak(shell);
 			});
 		} finally {
 			shell.dispose();
