@@ -9,11 +9,11 @@
 	<artifactId>foo-parent</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 
-
 	<packaging>pom</packaging>
 
 	<properties>
 		<tycho-version>1.1.0</tycho-version>
+		<jacoco-version>0.8.1</jacoco-version>
 	</properties>
 
 
@@ -24,6 +24,7 @@
 		<module>foo.bundle.tests</module>
 		<module>foo.bundle.ui</module>
 		<module>foo.bundle.ui.tests</module>
+		<module>foo.tests.reports</module>
 	</modules>
 
 
@@ -42,6 +43,7 @@
 		
 	</repositories>
 
+	<!-- build configurations that are used in the project -->
 	<build>
 		<plugins>
 			<plugin>
@@ -50,7 +52,45 @@
 				<version>${tycho-version}</version>
 				<extensions>true</extensions>
 			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<useProjectSettings>true</useProjectSettings>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
+
+
+	<profiles>
+
+		<profile>
+			<id>codeCoverage</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.jacoco</groupId>
+						<artifactId>jacoco-maven-plugin</artifactId>
+						<version>${jacoco-version}</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>prepare-agent</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+	</profiles>
 
 </project>
