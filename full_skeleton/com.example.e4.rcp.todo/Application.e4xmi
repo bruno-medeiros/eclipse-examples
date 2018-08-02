@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmi:id="_M7iE4HueEei7RcfiKfpxzQ" elementId="com.example.e4.rcp.todo.application">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_Pwh8EHueEei7RcfiKfpxzQ" elementId="com.example.e4.rcp.todo.trimmedwindow.taskmanager" label="Task Manager" x="0" y="0" width="800" height="1024"/>
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_Pwh8EHueEei7RcfiKfpxzQ" elementId="com.example.e4.rcp.todo.trimmedwindow.taskmanager" label="Task Manager" x="0" y="0" width="800" height="1024">
+    <children xsi:type="basic:PartSashContainer" xmi:id="_YK1HIJYyEeiDruEZPFBDjQ" elementId="com.example.e4.rcp.todo.partsashcontainer.main" horizontal="true">
+      <children xsi:type="basic:PartStack" xmi:id="_dy_pgJYyEeiDruEZPFBDjQ" elementId="com.example.e4.rcp.todo.partstack.0">
+        <children xsi:type="basic:Part" xmi:id="_jomyAJYyEeiDruEZPFBDjQ" elementId="com.example.e4.rcp.todo.part.todooverview" contributionURI="bundleclass://com.example.e4.rcp.todo/com.example.e4.rcp.todo.parts.TodoOverviewPart" label="Overview"/>
+      </children>
+      <children xsi:type="basic:PartSashContainer" xmi:id="_eH2fMJYyEeiDruEZPFBDjQ" elementId="com.example.e4.rcp.todo.partsashcontainer.0">
+        <children xsi:type="basic:PartStack" xmi:id="_fPZ9IJYyEeiDruEZPFBDjQ" elementId="com.example.e4.rcp.todo.partstack.1">
+          <children xsi:type="basic:Part" xmi:id="_lAz7EJYyEeiDruEZPFBDjQ" elementId="com.example.e4.rcp.todo.part.tododetails" contributionURI="bundleclass://com.example.e4.rcp.todo/com.example.e4.rcp.todo.parts.TodoDetailsPart" label="Details"/>
+        </children>
+        <children xsi:type="basic:PartStack" xmi:id="_fifRMJYyEeiDruEZPFBDjQ" elementId="com.example.e4.rcp.todo.partstack.2">
+          <children xsi:type="basic:Part" xmi:id="_nd6PoJYyEeiDruEZPFBDjQ" elementId="com.example.e4.rcp.todo.part.playground" contributionURI="bundleclass://com.example.e4.rcp.todo/com.example.e4.rcp.todo.parts.PlaygroundPart" label="Playground"/>
+        </children>
+      </children>
+    </children>
+  </children>
   <addons xmi:id="_M7iE4XueEei7RcfiKfpxzQ" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_M7iE4nueEei7RcfiKfpxzQ" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_M7iE43ueEei7RcfiKfpxzQ" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
